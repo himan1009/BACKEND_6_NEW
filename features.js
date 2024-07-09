@@ -1,2 +1,4 @@
 const gfName="Tina";
-module.exports=gfName;
+const gfName1="Tina";
+
+export {gfName, gfName1};
