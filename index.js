@@ -1,5 +1,8 @@
 import http from "http";
 import {gfName, gfName1, love} from "./features.js";
+import fs from "fs";
+
+const home=fs.readFileSync("./index.html");
 
 console.log(gfName);
 console.log(gfName1);
@@ -9,7 +12,9 @@ const server = http.createServer((req, res) => {
         res.end(`<h1>LOVE IS ${love()}</h1>`)
     }
     else if(req.url==="/"){
-        res.end("<h1>HOME PAGE</h1>");
+        fs.readFile("./index.html", (err, home)=>{
+            res.end(home);
+        });
     }
     else if(req.url==="/contact"){
         res.end("<h1>CONTACT PAGE</h1>");
