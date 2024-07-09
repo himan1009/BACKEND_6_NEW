@@ -1,9 +1,11 @@
 import http from "http";
 import {gfName, gfName1, love} from "./features.js";
 import fs from "fs";
+import path from "path";
 
 const home=fs.readFileSync("./index.html");
 
+console.log(path.extname("/home/random/index.html"));
 console.log(gfName);
 console.log(gfName1);
 

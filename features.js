@@ -1,5 +1,5 @@
 const gfName="Tina";
-const gfName1="Tina";
+const gfName1="Aditi";
 
 export const love=()=>{
     return `${Math.floor(Math.random()*100)}%`;
