@@ -1,8 +1,9 @@
 import http from "http";
-import {gfName, gfName1} from "./features.js";
+import {gfName, gfName1, love} from "./features.js";
 
 console.log(gfName);
 console.log(gfName1);
+console.log(love());
 
 const server = http.createServer((req, res) => {
     if(req.url==="/about"){
