@@ -3,11 +3,10 @@ import {gfName, gfName1, love} from "./features.js";
 
 console.log(gfName);
 console.log(gfName1);
-console.log(love());
 
 const server = http.createServer((req, res) => {
     if(req.url==="/about"){
-        res.end("<h1>ABOUT PAGE</h1>")
+        res.end(`<h1>LOVE IS ${love()}</h1>`)
     }
     else if(req.url==="/"){
         res.end("<h1>HOME PAGE</h1>");
